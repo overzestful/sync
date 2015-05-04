@@ -1,0 +1,5 @@
+INDEX VERSION 1.126+D:\Workspace for Android\sync\.metadata\.plugins\org.eclipse.jdt.core
+3534155907.index
+3047097614.index
+919314441.index
+3515282563.index

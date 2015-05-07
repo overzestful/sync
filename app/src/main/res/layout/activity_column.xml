@@ -7,7 +7,7 @@
         android:id="@+id/ColMemberID"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.2"
+        android:layout_weight="0.3"
         android:text="CustomerID"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -15,7 +15,7 @@
         android:id="@+id/ColName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1.0"
+        android:layout_weight="2.0"
         android:text="Name"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -23,7 +23,7 @@
         android:id="@+id/ColTel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="0.8"
         android:text="Tel"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 

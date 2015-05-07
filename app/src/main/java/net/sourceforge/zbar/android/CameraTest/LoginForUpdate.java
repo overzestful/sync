@@ -129,7 +129,7 @@ public class LoginForUpdate extends Activity {
         HttpPost httpPost = new HttpPost(url);
 
         try {
-            httpPost.setEntity(new UrlEncodedFormEntity(params));
+            httpPost.setEntity(new UrlEncodedFormEntity(params,"UTF-8"));
             HttpResponse response = client.execute(httpPost);
             StatusLine statusLine = response.getStatusLine();
             int statusCode = statusLine.getStatusCode();

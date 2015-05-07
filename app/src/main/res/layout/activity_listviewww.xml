@@ -1,7 +1,8 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/tableLayout1"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_white">
 
     <TableRow
         android:id="@+id/tableRow1"
@@ -13,13 +14,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Update Member : "
+            android:text="ค้นหากิจกรรม :"
             android:layout_span="1"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <EditText
             android:id="@+id/txtKeySearch"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:ems="4" >
         </EditText>
@@ -28,7 +29,7 @@
             android:id="@+id/btnSearch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Search" />
+            android:text="ค้นหา" />
 
     </TableRow>
 

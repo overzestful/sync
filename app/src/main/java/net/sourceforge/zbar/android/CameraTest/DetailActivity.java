@@ -65,11 +65,14 @@ public class DetailActivity extends Activity {
     {
         // txtMemberID,txtMemberID,txtUsername,txtPassword,txtName,txtEmail,txtTel
         final TextView tMemberID = (TextView)findViewById(R.id.txtMemberID);
-        final TextView tUsername = (TextView)findViewById(R.id.txtUsername);
-        final TextView tPassword = (TextView)findViewById(R.id.txtPassword);
-        final TextView tName = (TextView)findViewById(R.id.txtName);
-        final TextView tEmail = (TextView)findViewById(R.id.txtEmail);
-        final TextView tTel = (TextView)findViewById(R.id.txtTel);
+        final TextView tActivityName = (TextView)findViewById(R.id.txtActivityName);
+        final TextView tActivityStaff = (TextView)findViewById(R.id.txtActivityStaff);
+        final TextView tSpinnerType = (TextView)findViewById(R.id.txtSpinnerType);
+        final TextView tHour = (TextView)findViewById(R.id.txtHour);
+        final TextView tDateStart = (TextView)findViewById(R.id.txtDateStart);
+        final TextView tTimeStart = (TextView)findViewById(R.id.txtTimeStart);
+        final TextView tDateEnd = (TextView)findViewById(R.id.txtDateEnd);
+        final TextView tTimeEnd = (TextView)findViewById(R.id.txtTimeEnd);
 
         String url = "http://10.0.3.2/login/getByMemberID.php";
 
@@ -84,42 +87,54 @@ public class DetailActivity extends Activity {
          * {"MemberID":"2","Username":"adisorn","Password":"adisorn@2","Name":"Adisorn Bunsong","Tel":"021978032","Email":"adisorn@thaicreate.com"}
          */
 
-        String resultServer  = getHttpPost(url,params);
+        String resultServer  = getHttpPost(url,params,"UTF-8");
 
         String strMemberID = "";
-        String strUsername = "";
-        String strPassword = "";
-        String strName = "";
-        String strEmail = "";
-        String strTel = "";
+        String strActivityName = "";
+        String strActivityStaff = "";
+        String strSpinnerType = "";
+        String strHour = "";
+        String strDateStart = "";
+        String strTimeStart = "";
+        String strDateEnd = "";
+        String strTimeEnd = "";
 
         JSONObject c;
         try {
             c = new JSONObject(resultServer);
             strMemberID = c.getString("MemberID");
-            strUsername = c.getString("Username");
-            strPassword = c.getString("Password");
-            strName = c.getString("Name");
-            strEmail = c.getString("Email");
-            strTel = c.getString("Tel");
+            strActivityName = c.getString("ActivityName");
+            strActivityStaff = c.getString("ActivityStaff");
+            strSpinnerType = c.getString("SpinnerType");
+            strHour = c.getString("Hour");
+            strDateStart = c.getString("DateStart");
+            strTimeStart = c.getString("TimeStart");
+            strDateEnd = c.getString("DateEnd");
+            strTimeEnd = c.getString("TimeEnd");
 
             if(!strMemberID.equals(""))
             {
                 tMemberID.setText(strMemberID);
-                tUsername.setText(strUsername);
-                tPassword.setText(strPassword);
-                tName.setText(strName);
-                tEmail.setText(strEmail);
-                tTel.setText(strTel);
+                tActivityName.setText(strActivityName);
+                tActivityStaff.setText(strActivityStaff);
+                tSpinnerType.setText(strSpinnerType);
+                tHour.setText(strHour);
+                tDateStart.setText(strDateStart);
+                tTimeStart.setText(strTimeStart);
+                tDateEnd.setText(strDateEnd);
+                tTimeEnd.setText(strTimeEnd);
             }
             else
             {
                 tMemberID.setText("-");
-                tUsername.setText("-");
-                tPassword.setText("-");
-                tName.setText("-");
-                tEmail.setText("-");
-                tTel.setText("-");
+                tActivityName.setText("-");
+                tActivityStaff.setText("-");
+                tSpinnerType.setText("-");
+                tHour.setText("-");
+                tDateStart.setText("-");
+                tTimeStart.setText("-");
+                tDateEnd.setText("-");
+                tTimeEnd.setText("-");
             }
 
         } catch (JSONException e) {
@@ -129,13 +144,13 @@ public class DetailActivity extends Activity {
 
     }
 
-    public String getHttpPost(String url,List<NameValuePair> params) {
+    public String getHttpPost(String url, List<NameValuePair> params, String s) {
         StringBuilder str = new StringBuilder();
         HttpClient client = new DefaultHttpClient();
         HttpPost httpPost = new HttpPost(url);
 
         try {
-            httpPost.setEntity(new UrlEncodedFormEntity(params));
+            httpPost.setEntity(new UrlEncodedFormEntity(params,"UTF-8"));
             HttpResponse response = client.execute(httpPost);
             StatusLine statusLine = response.getStatusLine();
             int statusCode = statusLine.getStatusCode();

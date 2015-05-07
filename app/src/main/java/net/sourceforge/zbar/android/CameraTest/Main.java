@@ -156,13 +156,7 @@ public class Main extends Activity {
 
 
     }
-    public  void sync(View v){
-        Intent intent = new Intent(Main.this, net.sourceforge.zbar.android.CameraTest.MainActivity.class);
-        //setContentView(R.layout.activity_view_calendar);
-        startActivity(intent);
 
-
-    }
 
 
 

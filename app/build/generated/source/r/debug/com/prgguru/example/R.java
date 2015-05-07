@@ -274,7 +274,7 @@ public final class R {
 		public static final int beginning = 0x7f0a000f;
 		public static final int btnCancel = 0x7f0a0085;
 		public static final int btnadd = 0x7f0a0084;
-		public static final int button1 = 0x7f0a0061;
+		public static final int button1 = 0x7f0a0064;
 		public static final int checkbox = 0x7f0a002d;
 		public static final int collapseActionView = 0x7f0a0014;
 		public static final int default_activity_button = 0x7f0a0028;
@@ -299,8 +299,8 @@ public final class R {
 		public static final int progress_circular = 0x7f0a0004;
 		public static final int progress_horizontal = 0x7f0a0005;
 		public static final int radio = 0x7f0a002f;
-		public static final int refresh = 0x7f0a0067;
-		public static final int relativeLayout1 = 0x7f0a0066;
+		public static final int refresh = 0x7f0a006c;
+		public static final int relativeLayout1 = 0x7f0a006b;
 		public static final int search_badge = 0x7f0a0032;
 		public static final int search_bar = 0x7f0a0031;
 		public static final int search_button = 0x7f0a0033;
@@ -323,7 +323,7 @@ public final class R {
 		public static final int top_action_bar = 0x7f0a0020;
 		public static final int up = 0x7f0a0021;
 		public static final int useLogo = 0x7f0a000e;
-		public static final int userId = 0x7f0a009d;
+		public static final int userId = 0x7f0a009c;
 		public static final int userName = 0x7f0a0083;
 		public static final int withText = 0x7f0a0017;
 	}

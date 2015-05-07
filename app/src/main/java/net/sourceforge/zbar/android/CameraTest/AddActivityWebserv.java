@@ -7,6 +7,7 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
@@ -166,6 +167,10 @@ public class AddActivityWebserv extends Activity {
             public void onClick(View v) {
                 if (SaveData()) {
                     // When Save Complete
+                    Intent intent = new Intent(AddActivityWebserv.this,Listview.class);
+                    //setContentView(R.layout.activity_view_calendar);
+                    startActivity(intent);
+
                 }
             }
         });
@@ -269,6 +274,7 @@ public class AddActivityWebserv extends Activity {
 
         String url = "http://10.0.3.2/register/saveADDData.php";
 
+
        List<NameValuePair> params = new ArrayList<NameValuePair>();
         params.add(new BasicNameValuePair("sActivityName", txtActivityName.getText().toString()));
         params.add(new BasicNameValuePair("sActivityStaff", txtActivityStaff.getText().toString()));
@@ -336,7 +342,8 @@ public class AddActivityWebserv extends Activity {
         HttpPost httpPost = new HttpPost(url);
 
         try {
-            httpPost.setEntity(new UrlEncodedFormEntity(params));
+            httpPost.setEntity(new UrlEncodedFormEntity(params,"UTF-8"));
+           // httpPost.setEntity(new UrlEncodedFormEntity(params));
             HttpResponse response = client.execute(httpPost);
             StatusLine statusLine = response.getStatusLine();
             int statusCode = statusLine.getStatusCode();

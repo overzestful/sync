@@ -28,11 +28,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/vdetial"
         android:background="@drawable/viewdetail"
-        android:layout_marginTop="31dp"
-        android:layout_below="@+id/imageButton"
-        android:layout_alignLeft="@+id/imageButton" />
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/recbyqrcode"
+        android:layout_alignLeft="@+id/recbyqrcode"
+        android:onClick="viewScan"/>
 
-    <ImageButton
+    ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton"

@@ -323,7 +323,7 @@ public final class R {
 		public static final int top_action_bar = 0x7f0a0020;
 		public static final int up = 0x7f0a0021;
 		public static final int useLogo = 0x7f0a000e;
-		public static final int userId = 0x7f0a009c;
+		public static final int userId = 0x7f0a009b;
 		public static final int userName = 0x7f0a0083;
 		public static final int withText = 0x7f0a0017;
 	}

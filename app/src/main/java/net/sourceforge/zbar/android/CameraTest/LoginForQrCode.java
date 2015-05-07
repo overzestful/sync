@@ -136,7 +136,7 @@ public class LoginForQrCode extends Activity {
             if (statusCode == 200) { // Status OK
                 HttpEntity entity = response.getEntity();
                 InputStream content = entity.getContent();
-                BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+                BufferedReader reader = new BufferedReader(new InputStreamReader(content,"UTF-8"));
                 String line;
                 while ((line = reader.readLine()) != null) {
                     str.append(line);
@@ -150,6 +150,13 @@ public class LoginForQrCode extends Activity {
             e.printStackTrace();
         }
         return str.toString();
+    }
+    public void backmain(View v) {
+        Intent intent = new Intent(LoginForQrCode.this, Listview.class);
+        //  setContentView(R.layout.main_book);
+        startActivity(intent);
+
+
     }
 
 

@@ -137,5 +137,14 @@ public class MainActivity extends Activity {
 	}
 
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(MainActivity.this, CameraTestActivity.class);
+        //  setContentView(R.layout.main_book);
+        startActivity(intent);
+
+    }
+
 
 }
+

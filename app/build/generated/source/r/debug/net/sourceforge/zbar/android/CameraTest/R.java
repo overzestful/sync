@@ -875,11 +875,11 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f0a0001;
         public static final int action_menu_presenter=0x7f0a0002;
         public static final int action_mode_close_button=0x7f0a0024;
-        public static final int action_settings=0x7f0a009e;
+        public static final int action_settings=0x7f0a009d;
         public static final int activity_chooser_view_content=0x7f0a0025;
         public static final int addActivity=0x7f0a008b;
         public static final int always=0x7f0a0013;
-        public static final int back=0x7f0a009a;
+        public static final int back=0x7f0a0099;
         public static final int backhome=0x7f0a006a;
         public static final int beginning=0x7f0a000f;
         public static final int btnBack=0x7f0a0062;
@@ -905,7 +905,7 @@ containing a value of this type.
         public static final int checkedTextView1=0x7f0a0090;
         public static final int collapseActionView=0x7f0a0014;
         public static final int default_activity_button=0x7f0a0028;
-        public static final int delete=0x7f0a0099;
+        public static final int delete=0x7f0a0098;
         public static final int dialog=0x7f0a0018;
         public static final int disableHome=0x7f0a0009;
         public static final int dropdown=0x7f0a0019;
@@ -931,9 +931,8 @@ containing a value of this type.
         public static final int icon=0x7f0a002a;
         public static final int ifRoom=0x7f0a0015;
         public static final int image=0x7f0a0027;
-        public static final int imageButton=0x7f0a0098;
         public static final int imageView=0x7f0a008a;
-        public static final int imageView1=0x7f0a009b;
+        public static final int imageView1=0x7f0a009a;
         public static final int imageView10=0x7f0a0095;
         public static final int imageView2=0x7f0a003c;
         public static final int imageView3=0x7f0a0045;
@@ -947,7 +946,7 @@ containing a value of this type.
         public static final int listMode=0x7f0a0006;
         public static final int listView1=0x7f0a0056;
         public static final int list_item=0x7f0a0029;
-        public static final int menu_settings=0x7f0a009d;
+        public static final int menu_settings=0x7f0a009c;
         public static final int middle=0x7f0a0011;
         public static final int never=0x7f0a0016;
         public static final int none=0x7f0a0012;
@@ -1010,7 +1009,7 @@ containing a value of this type.
         public static final int txtUsername=0x7f0a0066;
         public static final int up=0x7f0a0021;
         public static final int useLogo=0x7f0a000e;
-        public static final int userId=0x7f0a009c;
+        public static final int userId=0x7f0a009b;
         public static final int userName=0x7f0a0083;
         public static final int vdetial=0x7f0a0097;
         public static final int viewCalendar=0x7f0a008d;

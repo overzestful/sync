@@ -267,14 +267,14 @@ public class Delete extends Activity {
         HttpPost httpPost = new HttpPost(url);
 
         try {
-            httpPost.setEntity(new UrlEncodedFormEntity(params));
+            httpPost.setEntity(new UrlEncodedFormEntity(params,"UTF-8"));
             HttpResponse response = client.execute(httpPost);
             StatusLine statusLine = response.getStatusLine();
             int statusCode = statusLine.getStatusCode();
             if (statusCode == 200) { // Download OK
                 HttpEntity entity = response.getEntity();
                 InputStream content = entity.getContent();
-                BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+                BufferedReader reader = new BufferedReader(new InputStreamReader(content,"UTF-8"));
                 String line;
                 while ((line = reader.readLine()) != null) {
                     str.append(line);

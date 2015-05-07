@@ -186,13 +186,13 @@ public class Listview extends Activity {
         } else if ("แก้ไขกิจกรรม".equals(CmdName)) {
             Toast.makeText(Listview.this, "Your Selected Update", Toast.LENGTH_LONG).show();
 
-         final String sMemberID = MyArrList.get(info.position).get("MemberID").toString();
+         String sMemberID = MyArrList.get(info.position).get("MemberID").toString();
             String sActivityName = MyArrList.get(info.position).get("ActivityName").toString();
             String sDateStart = MyArrList.get(info.position).get("DateStart").toString();
 
 
 
-            Intent newActivity = new Intent(Listview.this, LoginForUpdate.class);
+            Intent newActivity = new Intent(Listview.this, UpdateActivity.class);
                     newActivity.putExtra("MemberID", sMemberID);
                     startActivity(newActivity);
 
@@ -305,7 +305,7 @@ public class Listview extends Activity {
             if (statusCode == 200) { // Download OK
                 HttpEntity entity = response.getEntity();
                 InputStream content = entity.getContent();
-                BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+                BufferedReader reader = new BufferedReader(new InputStreamReader(content,"UTF-8"));
                 String line;
                 while ((line = reader.readLine()) != null) {
                     str.append(line);

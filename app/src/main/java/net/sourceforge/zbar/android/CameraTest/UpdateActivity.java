@@ -81,16 +81,16 @@ public class UpdateActivity extends Activity {
     public void showInfo()
     {
         // txtMemberID,txtUsername,txtPassword,txtConPassword,txtName,txtEmail,txtTel
-        final EditText txtActivityName = (EditText) findViewById(R.id.txtActivityName);
-        final EditText txtActivityStaff = (EditText) findViewById(R.id.txtActivityStaff);
-        final EditText txtPassword = (EditText) findViewById(R.id.txtPassword);
-        final EditText txtConPassword = (EditText) findViewById(R.id.txtConPassword);
+        final EditText tActivityName = (EditText) findViewById(R.id.txtActivityName);
+        final EditText tActivityStaff = (EditText) findViewById(R.id.txtActivityStaff);
+        final EditText tPassword = (EditText) findViewById(R.id.txtPassword);
+        final EditText tConPassword = (EditText) findViewById(R.id.txtConPassword);
         final Spinner spinner_type = (Spinner)findViewById(R.id.spinner_type);
-        final EditText txtHour = (EditText) findViewById(R.id.txtHour);
-        final EditText txtDateStart = (EditText)findViewById(R.id.txtDateStart);
-        final EditText txtTimeStart = (EditText)findViewById(R.id.TimeStart);
-        final EditText txtDateEnd = (EditText)findViewById(R.id.txtDateEnd);
-        final EditText txtTimeEnd = (EditText)findViewById(R.id.TimeStart);
+        final EditText tHour = (EditText) findViewById(R.id.txtHour);
+        final EditText tDateStart = (EditText)findViewById(R.id.txtDateStart);
+        final EditText tTimeStart = (EditText)findViewById(R.id.TimeStart);
+        final EditText tDateEnd = (EditText)findViewById(R.id.txtDateEnd);
+        final EditText tTimeEnd = (EditText)findViewById(R.id.TimeStart);
 
         Button btnSave = (Button) findViewById(R.id.btnSave);
        // Button btnCancel = (Button) findViewById(R.id.btnCancel);
@@ -142,30 +142,30 @@ public class UpdateActivity extends Activity {
             if(!strMemberID.equals(""))
             {
                 //txtMemberID.setText(strMemberID);
-                txtActivityName.setText(strActivityName);
-                txtActivityStaff.setText(strActivityStaff);
-                txtPassword.setText(strPassword);
-                txtConPassword.setText(strConPassword);
+                tActivityName.setText(strActivityName);
+                tActivityStaff.setText(strActivityStaff);
+                tPassword.setText(strPassword);
+                tConPassword.setText(strConPassword);
                 spinner_type.setSelected(true);
-                txtHour.setText(strHour);
-                txtDateStart.setText(strDateStart);
-                txtTimeStart.setText(strTimeStart);
-                txtDateEnd.setText(strDateEnd);
-                txtTimeEnd.setText(strTimeEnd);
+                tHour.setText(strHour);
+                tDateStart.setText(strDateStart);
+                tTimeStart.setText(strTimeStart);
+                tDateEnd.setText(strDateEnd);
+                tTimeEnd.setText(strTimeEnd);
 
             }
             else
             {
-                txtActivityName.setText("-");
-                txtActivityStaff.setText("-");
-                txtPassword.setText("-");
-                txtConPassword.setText("-");
+                tActivityName.setText("-");
+                tActivityStaff.setText("-");
+                tPassword.setText("-");
+                tConPassword.setText("-");
                 //spinner_type.setSelected("-");
-                txtHour.setText("-");
-                txtDateStart.setText("-");
-                txtTimeStart.setText("-");
-                txtDateStart.setText("-");
-                txtDateEnd.setText("-");
+                tHour.setText("-");
+                tDateStart.setText("-");
+                tTimeStart.setText("-");
+                tDateStart.setText("-");
+                tDateEnd.setText("-");
 
 
                 btnSave.setEnabled(false);
@@ -312,7 +312,7 @@ public class UpdateActivity extends Activity {
             if (statusCode == 200) { // Status OK
                 HttpEntity entity = response.getEntity();
                 InputStream content = entity.getContent();
-                BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+                BufferedReader reader = new BufferedReader(new InputStreamReader(content,"UTF-8"));
                 String line;
                 while ((line = reader.readLine()) != null) {
                     str.append(line);

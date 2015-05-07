@@ -136,7 +136,7 @@ public class LoginForUpdate extends Activity {
             if (statusCode == 200) { // Status OK
                 HttpEntity entity = response.getEntity();
                 InputStream content = entity.getContent();
-                BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+                BufferedReader reader = new BufferedReader(new InputStreamReader(content,"UTF-8"));
                 String line;
                 while ((line = reader.readLine()) != null) {
                     str.append(line);
@@ -152,6 +152,13 @@ public class LoginForUpdate extends Activity {
         return str.toString();
     }
 
+    public void backmain(View v) {
+        Intent intent = new Intent(LoginForUpdate.this, Listview.class);
+        //  setContentView(R.layout.main_book);
+        startActivity(intent);
+
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

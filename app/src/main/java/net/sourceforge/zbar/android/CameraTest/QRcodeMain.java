@@ -25,4 +25,12 @@ public class QRcodeMain extends Activity {
 
     }
 
+    public void viewScan(View v) {
+        Intent intent = new Intent(QRcodeMain.this, MainActivity.class);
+        //  setContentView(R.layout.main_book);
+        startActivity(intent);
+
+
+    }
+
 }

@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.app.Activity;
 
+import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,7 +29,7 @@ public class Main extends Activity {
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-        //requestWindowFeature(Window.FEATURE_NO_TITLE);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.main);
 
 
@@ -129,7 +130,7 @@ public class Main extends Activity {
         return true;
     }
 
-    @Override
+  /*  @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_add) {
@@ -141,5 +142,5 @@ public class Main extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
-
+*/
 }

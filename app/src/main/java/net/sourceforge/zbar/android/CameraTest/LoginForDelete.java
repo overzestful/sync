@@ -120,15 +120,16 @@ public class LoginForDelete extends Activity {
                 else
                 {
                     Toast.makeText(LoginForDelete.this, "Login OK", Toast.LENGTH_SHORT).show();
+                    finish();
 
 
 
 
 
-
+/*
                     Intent newActivity = new Intent(LoginForDelete.this,Delete.class);
                     newActivity.putExtra("MemberID", strMemberID);
-                    startActivity(newActivity);
+                    startActivity(newActivity);*/
                 }
 
             }
@@ -174,5 +175,22 @@ public class LoginForDelete extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+    @Override
+    public void onBackPressed() {
+
+       /* Intent setIntent = new Intent(Intent.ACTION_MAIN);
+        setIntent.addCategory(Intent.CATEGORY_HOME);
+        setIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(setIntent);*/
+    }
+
+    public void backmain(View v) {
+        Intent intent = new Intent(LoginForDelete.this, Listview.class);
+        //  setContentView(R.layout.main_book);
+        startActivity(intent);
+
+
+    }
+
 
 }

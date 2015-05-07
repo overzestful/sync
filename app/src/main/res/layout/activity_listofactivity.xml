@@ -13,7 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Search Customer : "
+            android:text="ค้นหากิจกรรม : "
             android:layout_span="1"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -21,7 +21,8 @@
             android:id="@+id/editText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="4" >
+            android:ems="4"
+            android:layout_span="12">
 
         </EditText>
 
@@ -29,7 +30,8 @@
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="OK" />
+            android:text="ค้นหา"
+            android:layout_column="13" />
 
     </TableRow>
 

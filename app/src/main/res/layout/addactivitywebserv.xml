@@ -125,7 +125,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@+id/txtDateStart"
-                android:text="Select Date" />
+                android:text="เลือกวันที่" />
         </RelativeLayout>
 
         <TextView
@@ -155,9 +155,9 @@
                 android:id="@+id/selectTimeStart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:text="เลือกเวลา"
                 android:layout_alignParentTop="true"
-                android:text="Select Time" />
+                android:layout_toRightOf="@+id/TimeStart" />
         </RelativeLayout>
 
         <TextView
@@ -184,7 +184,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@+id/txtDateEnd"
-                android:text="Select Date" />
+                android:text="เลือกวันที่" />
         </RelativeLayout>
 
         <TextView
@@ -214,9 +214,9 @@
                 android:id="@+id/selectTimeEnd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:text="เลือกเวลา"
                 android:layout_alignParentTop="true"
-                android:text="Select Time" />
+                android:layout_toRightOf="@+id/TimeEnd" />
         </RelativeLayout>
 -->
 
@@ -224,7 +224,7 @@
             android:id="@+id/btnSave"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="Save" />
+            android:text="บันทึก" />
 
 
     </LinearLayout>

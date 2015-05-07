@@ -44,8 +44,9 @@
 
         <ListView
             android:id="@+id/listView1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
         </ListView>
 
     </LinearLayout>
@@ -64,7 +65,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="By.. ThaiCreate.Com" />
+            android:text="QR.Code Scanner Hr. Activity" />
 
     </LinearLayout>
 

@@ -814,7 +814,7 @@ containing a value of this type.
         public static int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static int abc_textfield_searchview_right_holo_light=0x7f020056;
         public static int ic_action_refresh=0x7f020057;
-        public static int ic_launcher=0x7f020058;
+        public static int icon=0x7f020058;
     }
     public static final class id {
         public static int action_bar=0x7f07001c;

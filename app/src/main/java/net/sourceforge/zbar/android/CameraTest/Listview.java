@@ -57,6 +57,10 @@ public class Listview extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listviewww);
 
+        ListView listview = ( ListView ) this.findViewById ( R.id.listView1 );
+
+        listview.setDividerHeight ( 50);
+
         // Permission StrictMode
         if (android.os.Build.VERSION.SDK_INT > 9) {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -204,6 +208,15 @@ public class Listview extends Activity {
             final String sMemberID = MyArrList.get(info.position).get("MemberID").toString();
             String sActivityName = MyArrList.get(info.position).get("ActivityName").toString();
             String sDateStart = MyArrList.get(info.position).get("DateStart").toString();
+
+
+
+
+
+
+
+
+
 
 
 

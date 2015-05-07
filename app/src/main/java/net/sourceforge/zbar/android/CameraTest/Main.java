@@ -17,6 +17,10 @@ import com.prgguru.example.MainActivity;
 
 
 public class Main extends Activity {
+    protected static int HOME = 900;
+
+    protected static int ABOUTUS = 910;
+
 
     private Toast toast;
     TextView tv_footer;
@@ -61,7 +65,46 @@ public class Main extends Activity {
         }
     }
 
+    //ปุ่ม menu home
 
+    public boolean onCreateOptionsMenu ( Menu menu )
+    {
+        MenuItem item1 = menu.add ( 0, Main.HOME, Menu.NONE, "Home" );
+
+        item1.setIcon ( R.drawable.contentmenu_home );
+
+
+        MenuItem item2 = menu.add ( 0, Main.ABOUTUS, Menu.NONE, "About US" );
+
+        item2.setIcon ( R.drawable.contentmenu_aboutus );
+
+
+        return super.onCreateOptionsMenu ( menu );
+    }
+
+    public boolean onOptionsItemSelected ( MenuItem item )
+    {
+        int itemID = item.getItemId ( );
+
+
+        if ( itemID == Main.HOME )
+        {
+            Intent intent = new Intent(Main.this, Main.class);
+            //  setContentView(R.layout.main_book);
+            startActivity(intent);
+
+
+        }
+        else if ( itemID == Main.ABOUTUS )
+        {
+            Intent intent = new Intent(Main.this, AddActivityWebserv.class);
+            //  setContentView(R.layout.main_book);
+            startActivity(intent);
+        }
+
+
+        return super.onOptionsItemSelected ( item );
+    }
 
 
    /* @Override
@@ -124,11 +167,6 @@ public class Main extends Activity {
 
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
 
   /*  @Override
     public boolean onOptionsItemSelected(MenuItem item) {

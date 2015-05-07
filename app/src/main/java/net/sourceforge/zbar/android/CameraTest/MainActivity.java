@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
@@ -27,6 +28,8 @@ import java.util.HashMap;
 
 
 public class MainActivity extends Activity {
+
+
 	//DB Class to perform DB related operations
 	DBController controller = new DBController(this);
 	//Progress Dialog Object
@@ -132,6 +135,7 @@ public class MainActivity extends Activity {
 				Toast.makeText(getApplicationContext(), "No data in SQLite DB, please do enter User name to perform Sync action", Toast.LENGTH_LONG).show();
 		}
 	}
+
 
 
 }

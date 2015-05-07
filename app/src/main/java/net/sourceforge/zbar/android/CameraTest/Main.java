@@ -74,7 +74,7 @@ public class Main extends Activity {
         item1.setIcon ( R.drawable.contentmenu_home );
 
 
-        MenuItem item2 = menu.add ( 0, Main.ABOUTUS, Menu.NONE, "About US" );
+        MenuItem item2 = menu.add ( 0, Main.ABOUTUS, Menu.NONE, "" );
 
         item2.setIcon ( R.drawable.contentmenu_aboutus );
 

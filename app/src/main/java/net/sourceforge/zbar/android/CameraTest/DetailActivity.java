@@ -87,7 +87,7 @@ public class DetailActivity extends Activity {
          * {"MemberID":"2","Username":"adisorn","Password":"adisorn@2","Name":"Adisorn Bunsong","Tel":"021978032","Email":"adisorn@thaicreate.com"}
          */
 
-        String resultServer  = getHttpPost(url,params,"UTF-8");
+        String resultServer  = getHttpPost(url,params);
 
         String strMemberID = "";
         String strActivityName = "";
@@ -144,7 +144,7 @@ public class DetailActivity extends Activity {
 
     }
 
-    public String getHttpPost(String url, List<NameValuePair> params, String s) {
+    public String getHttpPost(String url,List<NameValuePair> params) {
         StringBuilder str = new StringBuilder();
         HttpClient client = new DefaultHttpClient();
         HttpPost httpPost = new HttpPost(url);

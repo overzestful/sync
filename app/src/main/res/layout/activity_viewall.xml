@@ -14,7 +14,7 @@
             android:id="@+id/buttonAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#ff000002" />
+            android:background="#00ff7500" />
     </LinearLayout>
 
 

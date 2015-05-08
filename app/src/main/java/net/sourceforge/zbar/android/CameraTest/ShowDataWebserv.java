@@ -139,7 +139,7 @@ public class ShowDataWebserv extends Activity {
             if(controller.dbSyncCount() != 0){
                 prgDialog.show();
                 params.put("usersJSON", controller.composeJSONfromSQLite());
-                client.post("http://10.0.3.2/sqlitemysqlsync/insertuser.php",params ,new AsyncHttpResponseHandler() {
+                client.post("http://qrcodeactivity.seniorproject-te.com/sqlitemysqlsync/insertuser.php",params ,new AsyncHttpResponseHandler() {
                     @Override
                     public void onSuccess(String response) {
                         System.out.println(response);

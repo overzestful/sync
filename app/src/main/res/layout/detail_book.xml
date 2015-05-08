@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:text="ผู้ดูแลกิจกรรม" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/textBookPASSWORD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
         android:id="@+id/textBookCONFIRMPASSWORD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ยืนยันรหัสผ่าน" />
+        android:text="ยืนยันรหัสผ่าน" />-->
 
     <TextView
         android:id="@+id/textBookHOUR"

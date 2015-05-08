@@ -46,7 +46,7 @@ public class Main extends Activity {
 
 
     }
-    private long lastBackPressTime = 0;
+    /*private long lastBackPressTime = 0;
     @Override
     public void onBackPressed(){
         if(this.lastBackPressTime < System.currentTimeMillis() - 2000){
@@ -59,7 +59,7 @@ public class Main extends Activity {
             }
             super.onBackPressed();
         }
-    }
+    }*/
 
     //ปุ่ม menu home
 

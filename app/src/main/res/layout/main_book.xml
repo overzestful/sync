@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Hello World, SQLiteDatabaseActivity!"
-        android:background="#000066ff"></ListView>
+        android:background="@drawable/bg_white"></ListView>
 
 </LinearLayout>
 

@@ -70,7 +70,7 @@ public class LoginForDelete extends Activity {
             public void onClick(View v) {
 
 
-                String url = "http://10.0.3.2/login/checkLogin.php";
+                String url = "http://qrcodeactivity.seniorproject-te.com/login/checkLogin.php";
                 List<NameValuePair> params = new ArrayList<NameValuePair>();
                 params.add(new BasicNameValuePair("sPassword", txtUser.getText().toString()));
                 params.add(new BasicNameValuePair("sConPassword", txtPass.getText().toString()));

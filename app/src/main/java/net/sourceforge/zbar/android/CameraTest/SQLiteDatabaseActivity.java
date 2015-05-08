@@ -88,8 +88,8 @@ public class SQLiteDatabaseActivity extends ListActivity {
 
         txt_name.setText("ชื่อกิจกรรม :\t" + book.getName());
         txt_staff.setText("ผู้ดูแล :\t" + book.getStaff());
-        txt_password.setText("รหัสผ่าน :\t" + book.getPassword());
-        txt_confirm_password.setText("ยืนยันรหัสผ่าน :\t" + book.getConfirm_password());
+        /*txt_password.setText("รหัสผ่าน :\t" + book.getPassword());
+        txt_confirm_password.setText("ยืนยันรหัสผ่าน :\t" + book.getConfirm_password());*/
         txt_hour.setText("จำนวนชั่วโมง :\t" + book.getHour());
 
         //enter

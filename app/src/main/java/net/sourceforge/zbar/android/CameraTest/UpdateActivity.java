@@ -95,7 +95,7 @@ public class UpdateActivity extends Activity {
         Button btnSave = (Button) findViewById(R.id.btnSave);
        // Button btnCancel = (Button) findViewById(R.id.btnCancel);
 
-        String url = "http://10.0.3.2/register/getByMemberID.php";
+        String url = "http://qrcodeactivity.seniorproject-te.com/register/getByMemberID.php";
 
         Intent intent= getIntent();
         final String MemberID = intent.getStringExtra("MemberID");

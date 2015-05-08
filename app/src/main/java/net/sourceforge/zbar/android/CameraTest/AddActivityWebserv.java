@@ -276,7 +276,7 @@ public class AddActivityWebserv extends Activity {
         }*/
 
 
-        String url = "http://10.0.3.2/register/saveADDData.php";
+        String url = "http://qrcodeactivity.seniorproject-te.com/register/saveADDData.php";
 
 
        List<NameValuePair> params = new ArrayList<NameValuePair>();

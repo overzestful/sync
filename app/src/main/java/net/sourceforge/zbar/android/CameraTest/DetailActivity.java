@@ -74,7 +74,7 @@ public class DetailActivity extends Activity {
         final TextView tDateEnd = (TextView)findViewById(R.id.txtDateEnd);
         final TextView tTimeEnd = (TextView)findViewById(R.id.txtTimeEnd);
 
-        String url = "http://10.0.3.2/login/getByMemberID.php";
+        String url = "http://qrcodeactivity.seniorproject-te.com/login/getByMemberID.php";
 
         Intent intent= getIntent();
         final String MemberID = intent.getStringExtra("MemberID");

@@ -101,7 +101,7 @@ public class Listview extends Activity {
          * {"MemberID":"3","Username":"surachai","Password":"surachai@3","Name":"Surachai Sirisart","Tel":"0876543210","Email":"surachai@thaicreate.com"}]
          */
 
-        String url = "http://10.0.3.2/register/showAllData.php";
+        String url = "http://qrcodeactivity.seniorproject-te.com/register/showAllData.php";
 
         // Paste Parameters
         List<NameValuePair> params = new ArrayList<NameValuePair>();
@@ -145,7 +145,7 @@ public class Listview extends Activity {
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
 
         menu.setHeaderIcon(android.R.drawable.btn_star_big_on);
-        menu.setHeaderTitle("Command");
+        menu.setHeaderTitle("รายละเอียด");
         String[] menuItems = Cmd;
         for (int i = 0; i<menuItems.length; i++) {
             menu.add(Menu.NONE, i, i, menuItems[i]);

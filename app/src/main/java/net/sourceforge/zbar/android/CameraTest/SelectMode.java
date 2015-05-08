@@ -7,14 +7,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 /**
  * Created by overzestful on 8/5/2558.
  */
 public class SelectMode  extends Activity {
 
-
+    private Toast toast;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +31,8 @@ public class SelectMode  extends Activity {
 */
 
 
-       Button ButtonOffline = (Button)findViewById(R.id.offline);
-     Button ButtonOnline = (Button)findViewById(R.id.online);
+       ImageButton ButtonOffline = (ImageButton)findViewById(R.id.offline);
+       ImageButton ButtonOnline = (ImageButton)findViewById(R.id.online);
 
 
 
@@ -96,6 +97,20 @@ public class SelectMode  extends Activity {
         startActivity(intent);
 
 
+    }
+    private long lastBackPressTime = 0;
+    @Override
+    public void onBackPressed(){
+        if(this.lastBackPressTime < System.currentTimeMillis() - 2000){
+            toast = Toast.makeText(this, "กดปุ่ม Back อีกครั้งเพื่อปิดแอพลิเคชั่น", 2000);
+            toast.show();
+            this.lastBackPressTime = System.currentTimeMillis();
+        }else{
+            if(toast != null){
+                toast.cancel();
+            }
+            super.onBackPressed();
+        }
     }
 
 

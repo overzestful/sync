@@ -96,7 +96,7 @@ public class Delete extends Activity {
          * {"MemberID":"3","Username":"surachai","Password":"surachai@3","Name":"Surachai Sirisart","Tel":"0876543210","Email":"surachai@thaicreate.com"}]
          */
 
-        String url = "http://10.0.3.2/delete/showAllData.php";
+        String url = "http://qrcodeactivity.seniorproject-te.com/delete/showAllData.php";
 
         // Paste Parameters
         List<NameValuePair> params = new ArrayList<NameValuePair>();
@@ -195,7 +195,7 @@ public class Delete extends Activity {
 
 
                                 // Request to Delete data.
-                                String url = "http://10.0.3.2/delete/deleteData.php";
+                                String url = "http://qrcodeactivity.seniorproject-te.com/delete/deleteData.php";
                                 List<NameValuePair> params = new ArrayList<NameValuePair>();
                                 params.add(new BasicNameValuePair("sMemberID", MyArrList.get(position).get("MemberID")));
 

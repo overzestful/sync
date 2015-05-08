@@ -254,8 +254,8 @@ public final class R {
 		public static final int abc_textfield_searchview_holo_light = 0x7f020054;
 		public static final int abc_textfield_searchview_right_holo_dark = 0x7f020055;
 		public static final int abc_textfield_searchview_right_holo_light = 0x7f020056;
-		public static final int ic_action_refresh = 0x7f020066;
-		public static final int icon = 0x7f020067;
+		public static final int ic_action_refresh = 0x7f020067;
+		public static final int icon = 0x7f020068;
 	}
 	public static final class id {
 		public static final int action_bar = 0x7f0a001c;

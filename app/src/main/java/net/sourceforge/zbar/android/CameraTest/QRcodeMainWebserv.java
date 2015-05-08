@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class QRcodeMain extends Activity {
+public class QRcodeMainWebserv extends Activity {
 
 
 
@@ -18,14 +18,15 @@ public class QRcodeMain extends Activity {
     }
 
     public void recScan(View v) {
-        Intent intent = new Intent(QRcodeMain.this, CameraTestActivity.class);
+        Intent intent = new Intent(QRcodeMainWebserv.this, CameraTestActivityWebserv.class);
         //  setContentView(R.layout.main_book);
         startActivity(intent);
 
 
     }
+
     public void viewScan(View v) {
-        Intent intent = new Intent(QRcodeMain.this, ShowData.class);
+        Intent intent = new Intent(QRcodeMainWebserv.this, MainActivity.class);
         //  setContentView(R.layout.main_book);
         startActivity(intent);
 

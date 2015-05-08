@@ -272,9 +272,9 @@ public final class R {
 		public static final int activity_chooser_view_content = 0x7f0a0025;
 		public static final int always = 0x7f0a0013;
 		public static final int beginning = 0x7f0a000f;
-		public static final int btnCancel = 0x7f0a0085;
-		public static final int btnadd = 0x7f0a0084;
-		public static final int button1 = 0x7f0a0064;
+		public static final int btnCancel = 0x7f0a0089;
+		public static final int btnadd = 0x7f0a0088;
+		public static final int button1 = 0x7f0a0065;
 		public static final int checkbox = 0x7f0a002d;
 		public static final int collapseActionView = 0x7f0a0014;
 		public static final int default_activity_button = 0x7f0a0028;
@@ -299,8 +299,8 @@ public final class R {
 		public static final int progress_circular = 0x7f0a0004;
 		public static final int progress_horizontal = 0x7f0a0005;
 		public static final int radio = 0x7f0a002f;
-		public static final int refresh = 0x7f0a006c;
-		public static final int relativeLayout1 = 0x7f0a006b;
+		public static final int refresh = 0x7f0a009f;
+		public static final int relativeLayout1 = 0x7f0a006c;
 		public static final int search_badge = 0x7f0a0032;
 		public static final int search_bar = 0x7f0a0031;
 		public static final int search_button = 0x7f0a0033;
@@ -318,13 +318,13 @@ public final class R {
 		public static final int split_action_bar = 0x7f0a001e;
 		public static final int submit_area = 0x7f0a0039;
 		public static final int tabMode = 0x7f0a0008;
-		public static final int textView1 = 0x7f0a0053;
+		public static final int textView1 = 0x7f0a0054;
 		public static final int title = 0x7f0a002b;
 		public static final int top_action_bar = 0x7f0a0020;
 		public static final int up = 0x7f0a0021;
 		public static final int useLogo = 0x7f0a000e;
-		public static final int userId = 0x7f0a009b;
-		public static final int userName = 0x7f0a0083;
+		public static final int userId = 0x7f0a009d;
+		public static final int userName = 0x7f0a0087;
 		public static final int withText = 0x7f0a0017;
 	}
 	public static final class integer {
@@ -355,10 +355,10 @@ public final class R {
 		public static final int abc_search_dropdown_item_icons_2line = 0x7f040015;
 		public static final int abc_search_view = 0x7f040016;
 		public static final int abc_simple_decor = 0x7f040017;
-		public static final int activity_main = 0x7f040021;
-		public static final int add_new_user = 0x7f040027;
-		public static final int support_simple_spinner_dropdown_item = 0x7f040031;
-		public static final int view_user_entry = 0x7f040032;
+		public static final int activity_main = 0x7f040022;
+		public static final int add_new_user = 0x7f040029;
+		public static final int support_simple_spinner_dropdown_item = 0x7f040033;
+		public static final int view_user_entry = 0x7f040034;
 	}
 	public static final class menu {
 		public static final int main = 0x7f0e0000;

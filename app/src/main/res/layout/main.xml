@@ -41,7 +41,8 @@
         android:id="@+id/viewCalendar"
         android:background="@drawable/viewcar_button"
         android:layout_below="@+id/viewallactivity"
-        android:layout_alignLeft="@+id/viewallactivity" />
+        android:layout_alignLeft="@+id/viewallactivity"
+        android:onClick="view_calendar"/>
 
     Button
         android:layout_width="wrap_content"

@@ -1,18 +1,19 @@
 package net.sourceforge.zbar.android.CameraTest;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.app.Activity;
+
 import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class Main extends Activity {
+public class MainWebserv extends Activity {
     protected static int HOME = 900;
 
     protected static int ABOUTUS = 910;
@@ -65,12 +66,12 @@ public class Main extends Activity {
 
     public boolean onCreateOptionsMenu ( Menu menu )
     {
-        MenuItem item1 = menu.add ( 0, Main.HOME, Menu.NONE, "Home" );
+        MenuItem item1 = menu.add ( 0, MainWebserv.HOME, Menu.NONE, "Home" );
 
         item1.setIcon ( R.drawable.contentmenu_home );
 
 
-        MenuItem item2 = menu.add ( 0, Main.ABOUTUS, Menu.NONE, "" );
+        MenuItem item2 = menu.add ( 0, MainWebserv.ABOUTUS, Menu.NONE, "" );
 
         item2.setIcon ( R.drawable.contentmenu_aboutus );
 
@@ -83,17 +84,17 @@ public class Main extends Activity {
         int itemID = item.getItemId ( );
 
 
-        if ( itemID == Main.HOME )
+        if ( itemID == MainWebserv.HOME )
         {
-            Intent intent = new Intent(Main.this, Main.class);
+            Intent intent = new Intent(MainWebserv.this, MainWebserv.class);
             //  setContentView(R.layout.main_book);
             startActivity(intent);
 
 
         }
-        else if ( itemID == Main.ABOUTUS )
+        else if ( itemID == MainWebserv.ABOUTUS )
         {
-            Intent intent = new Intent(Main.this, AddActivityWebserv.class);
+            Intent intent = new Intent(MainWebserv.this, AddActivityWebserv.class);
             //  setContentView(R.layout.main_book);
             startActivity(intent);
         }
@@ -130,7 +131,7 @@ public class Main extends Activity {
 
 
     public void addAc(View v) {
-        Intent intent = new Intent(Main.this, SQLiteDatabaseActivity.class);
+        Intent intent = new Intent(MainWebserv.this, AddActivityWebserv.class);
       //  setContentView(R.layout.main_book);
         startActivity(intent);
 
@@ -138,7 +139,7 @@ public class Main extends Activity {
     }
 
     public void viewAll(View v){
-        Intent intent = new Intent(Main.this, Viewall.class);
+        Intent intent = new Intent(MainWebserv.this, Listview.class);
        // setContentView(R.layout.activity_viewall);
         startActivity(intent);
 
@@ -146,7 +147,7 @@ public class Main extends Activity {
     }
 
     public  void view_calendar(View v){
-        Intent intent = new Intent(Main.this,ViewCalendar.class);
+        Intent intent = new Intent(MainWebserv.this,ViewCalendar.class);
         //setContentView(R.layout.activity_view_calendar);
         startActivity(intent);
 

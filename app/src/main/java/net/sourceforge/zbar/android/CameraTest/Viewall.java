@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * Created by Overzestful-Fhon on 3/4/2015.
  */
-public class SQLiteDatabaseActivity extends ListActivity {
+public class Viewall extends ListActivity {
     final static String TAG = "SQLite";
     private BookDataSource datasource;
     List<Book> values;
@@ -29,7 +29,7 @@ public class SQLiteDatabaseActivity extends ListActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_book);
+        setContentView(R.layout.activity_viewall);
         Button add_book = (Button) findViewById(R.id.buttonAdd);
         add_book.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
@@ -61,7 +61,7 @@ public class SQLiteDatabaseActivity extends ListActivity {
         final ArrayAdapter<Book> adapter = (ArrayAdapter<Book>) getListAdapter();
         final Book book = (Book) getListAdapter().getItem(id);
 
-        final Dialog dialog = new Dialog(SQLiteDatabaseActivity.this);
+        final Dialog dialog = new Dialog(Viewall.this);
         dialog.setContentView(R.layout.detail_book);
         dialog.setTitle("รายละเอียดกิจกรรม");
         dialog.setCancelable(true);
@@ -96,12 +96,12 @@ public class SQLiteDatabaseActivity extends ListActivity {
 
         Button button_edit = (Button) dialog.findViewById(R.id.buttonEdit);
 
-        button_edit.setOnClickListener(new View.OnClickListener() {
+        button_edit.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 if (getListAdapter().getCount() > 0) {
 
                     AlertDialog.Builder builder =
-                            new AlertDialog.Builder(SQLiteDatabaseActivity.this);
+                            new AlertDialog.Builder(Viewall.this);
                     LayoutInflater inflater = getLayoutInflater();
 
                     View view = inflater.inflate(R.layout.avtivity_enterpassword, null);
@@ -153,12 +153,12 @@ public class SQLiteDatabaseActivity extends ListActivity {
 
         Button button_enter = (Button) dialog.findViewById(R.id.buttonEnter);
 
-        button_enter.setOnClickListener(new View.OnClickListener() {
+        button_enter.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 if (getListAdapter().getCount() > 0) {
 
                     AlertDialog.Builder builder =
-                            new AlertDialog.Builder(SQLiteDatabaseActivity.this);
+                            new AlertDialog.Builder(Viewall.this);
                     LayoutInflater inflater = getLayoutInflater();
 
                     View view = inflater.inflate(R.layout.avtivity_enterpassword, null);
@@ -174,7 +174,7 @@ public class SQLiteDatabaseActivity extends ListActivity {
 
 
                             Intent goFirst = new Intent(getApplicationContext(),
-                                    QRcodeMainWebserv.class);
+                                    QRcodeMain.class);
                             startActivity(goFirst);
                             // Check username password
                  /*if (username.getText().equals("demo@example.com") &&
@@ -205,12 +205,12 @@ public class SQLiteDatabaseActivity extends ListActivity {
         });
         //delete book
         Button button_delete = (Button) dialog.findViewById(R.id.buttonDelete);
-        button_delete.setOnClickListener(new View.OnClickListener() {
+        button_delete.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 if (getListAdapter().getCount() > 0) {
 
                     AlertDialog.Builder builder =
-                            new AlertDialog.Builder(SQLiteDatabaseActivity.this);
+                            new AlertDialog.Builder(Viewall.this);
                     LayoutInflater inflater = getLayoutInflater();
 
                     View view = inflater.inflate(R.layout.avtivity_enterpassword, null);
@@ -253,7 +253,7 @@ public class SQLiteDatabaseActivity extends ListActivity {
                     adapter.remove(book);
                     dialog.dismiss();
                     dialog.dismiss();
-                    Toast.makeText(SQLiteDatabaseActivity.this, "Delete data succeed.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Viewall.this, "Delete data succeed.", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -261,7 +261,7 @@ public class SQLiteDatabaseActivity extends ListActivity {
 
 // close dialog
         Button button_cancel = (Button) dialog.findViewById(R.id.buttonClose);
-        button_cancel.setOnClickListener(new View.OnClickListener() {
+        button_cancel.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 dialog.dismiss();
             }
@@ -334,7 +334,7 @@ public class SQLiteDatabaseActivity extends ListActivity {
         final ArrayAdapter<Book> adapter = (ArrayAdapter<Book>) getListAdapter();
         final Book book = (Book) getListAdapter().getItem(id);
 
-        final Dialog dialog = new Dialog(SQLiteDatabaseActivity.this);
+        final Dialog dialog = new Dialog(Viewall.this);
         dialog.setContentView(R.layout.detail_book);
         dialog.setTitle("รายละเอียดกิจกรรม");
         dialog.setCancelable(true);
@@ -368,7 +368,7 @@ public class SQLiteDatabaseActivity extends ListActivity {
 
         //edit book
         Button button_edit = (Button) dialog.findViewById(R.id.buttonEdit);
-        button_edit.setOnClickListener(new View.OnClickListener() {
+        button_edit.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 if (getListAdapter().getCount() > 0) {
 
@@ -380,14 +380,14 @@ public class SQLiteDatabaseActivity extends ListActivity {
         });
         //delete book
         Button button_delete = (Button) dialog.findViewById(R.id.buttonDelete);
-        button_delete.setOnClickListener(new View.OnClickListener() {
+        button_delete.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 if (getListAdapter().getCount() > 0) {
                     datasource.deleteBook(book); // delete book
                     adapter.remove(book);
                     dialog.dismiss();
                     dialog.dismiss();
-                    Toast.makeText(SQLiteDatabaseActivity.this, "Delete data succeed.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Viewall.this, "Delete data succeed.", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -395,7 +395,7 @@ public class SQLiteDatabaseActivity extends ListActivity {
 
 // close dialog
         Button button_cancel = (Button) dialog.findViewById(R.id.buttonClose);
-        button_cancel.setOnClickListener(new View.OnClickListener() {
+        button_cancel.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 dialog.dismiss();
             }
@@ -406,7 +406,7 @@ public class SQLiteDatabaseActivity extends ListActivity {
 
 
     public void editBook(final Book book) {
-        final Dialog dialog = new Dialog(SQLiteDatabaseActivity.this);
+        final Dialog dialog = new Dialog(Viewall.this);
         dialog.setContentView(R.layout.add_book);
         dialog.setTitle("แก้ไขกิจกรรม");
         dialog.setCancelable(true);
@@ -429,7 +429,7 @@ public class SQLiteDatabaseActivity extends ListActivity {
         // setup button
         Button button_save = (Button) dialog.findViewById(R.id.buttonSave);
         button_save.setText("Update");
-        button_save.setOnClickListener(new View.OnClickListener() {
+        button_save.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 // get string
                 String value_name = name.getText().toString();
@@ -450,7 +450,7 @@ public class SQLiteDatabaseActivity extends ListActivity {
             }
         });
         Button button_cancel = (Button) dialog.findViewById(R.id.buttonCancel);
-        button_cancel.setOnClickListener(new View.OnClickListener() {
+        button_cancel.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 dialog.cancel();
             }
@@ -460,13 +460,13 @@ public class SQLiteDatabaseActivity extends ListActivity {
 
 
     public void addNewBook() {
-        final Dialog dialog = new Dialog(SQLiteDatabaseActivity.this);
+        final Dialog dialog = new Dialog(Viewall.this);
         dialog.setContentView(R.layout.add_book);
         dialog.setTitle("เพิ่มกิจกรรม");
         dialog.setCancelable(true);
         // setup button
         Button button_save = (Button) dialog.findViewById(R.id.buttonSave);
-        button_save.setOnClickListener(new View.OnClickListener() {
+        button_save.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 // get string
                 EditText name = (EditText) dialog
@@ -501,7 +501,7 @@ public class SQLiteDatabaseActivity extends ListActivity {
             }
         });
         Button button_cancel = (Button) dialog.findViewById(R.id.buttonCancel);
-        button_cancel.setOnClickListener(new View.OnClickListener() {
+        button_cancel.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 dialog.cancel();
             }

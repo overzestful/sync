@@ -20,7 +20,7 @@ public class Splash extends Activity {
 
         runnable = new Runnable() {
             public void run() {
-                Intent intent = new Intent(Splash.this, Main.class);
+                Intent intent = new Intent(Splash.this, SelectMode.class);
                 startActivity(intent);
                 finish();
             }

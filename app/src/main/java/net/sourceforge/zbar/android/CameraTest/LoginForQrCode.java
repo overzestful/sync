@@ -112,7 +112,7 @@ public class LoginForQrCode extends Activity {
                 else
                 {
                     Toast.makeText(LoginForQrCode.this, "Login OK", Toast.LENGTH_SHORT).show();
-                    Intent newActivity = new Intent(LoginForQrCode.this,QRcodeMain.class);
+                    Intent newActivity = new Intent(LoginForQrCode.this,QRcodeMainWebserv.class);
                     newActivity.putExtra("MemberID", strMemberID);
                     startActivity(newActivity);
                 }

@@ -8,9 +8,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Created by overzestful on 8/5/2558.
@@ -45,12 +42,12 @@ public class SelectMode  extends Activity {
 
     public boolean onCreateOptionsMenu ( Menu menu )
     {
-        MenuItem item1 = menu.add ( 0, Main.HOME, Menu.NONE, "Home" );
+        MenuItem item1 = menu.add ( 0, MainWebserv.HOME, Menu.NONE, "Home" );
 
         item1.setIcon ( R.drawable.contentmenu_home );
 
 
-        MenuItem item2 = menu.add ( 0, Main.ABOUTUS, Menu.NONE, "" );
+        MenuItem item2 = menu.add ( 0, MainWebserv.ABOUTUS, Menu.NONE, "" );
 
         item2.setIcon ( R.drawable.contentmenu_aboutus );
 
@@ -63,7 +60,7 @@ public class SelectMode  extends Activity {
         int itemID = item.getItemId ( );
 
 
-        if ( itemID == Main.HOME )
+        if ( itemID == MainWebserv.HOME )
         {
             Intent intent = new Intent(SelectMode.this, SelectMode.class);
             //  setContentView(R.layout.main_book);
@@ -71,7 +68,7 @@ public class SelectMode  extends Activity {
 
 
         }
-        else if ( itemID == Main.ABOUTUS )
+        else if ( itemID == MainWebserv.ABOUTUS )
         {
             Intent intent = new Intent(SelectMode.this, AddActivityWebserv.class);
             //  setContentView(R.layout.main_book);
@@ -86,7 +83,7 @@ public class SelectMode  extends Activity {
 
 
     public void offline(View v) {
-        Intent intent = new Intent(SelectMode.this, AddActivityWebserv.class);
+        Intent intent = new Intent(SelectMode.this, Main.class);
         //  setContentView(R.layout.main_book);
         startActivity(intent);
 
@@ -94,7 +91,7 @@ public class SelectMode  extends Activity {
     }
 
     public void online(View v){
-        Intent intent = new Intent(SelectMode.this, Main.class);
+        Intent intent = new Intent(SelectMode.this, MainWebserv.class);
         // setContentView(R.layout.activity_viewall);
         startActivity(intent);
 

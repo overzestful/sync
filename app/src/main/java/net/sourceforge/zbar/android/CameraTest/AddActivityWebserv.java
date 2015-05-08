@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -45,6 +46,9 @@ import java.util.Date;
 import java.util.List;
 
 public class AddActivityWebserv extends Activity {
+    protected static int HOME = 900;
+
+    protected static int ABOUTUS = 910;
 
     private EditText editT1;
     private Button btn1;
@@ -431,11 +435,46 @@ public class AddActivityWebserv extends Activity {
                 }
             };
 
+    //ปุ่ม menu home
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+    public boolean onCreateOptionsMenu ( Menu menu )
+    {
+        MenuItem item1 = menu.add ( 0, Main.HOME, Menu.NONE, "Home" );
+
+        item1.setIcon ( R.drawable.contentmenu_home );
+
+
+        MenuItem item2 = menu.add ( 0, Main.ABOUTUS, Menu.NONE, "" );
+
+        item2.setIcon ( R.drawable.contentmenu_aboutus );
+
+
+        return super.onCreateOptionsMenu ( menu );
     }
+
+    public boolean onOptionsItemSelected ( MenuItem item )
+    {
+        int itemID = item.getItemId ( );
+
+
+        if ( itemID == Main.HOME )
+        {
+            Intent intent = new Intent(AddActivityWebserv.this, Main.class);
+            //  setContentView(R.layout.main_book);
+            startActivity(intent);
+
+
+        }
+        else if ( itemID == Main.ABOUTUS )
+        {
+            Intent intent = new Intent(AddActivityWebserv.this, AddActivityWebserv.class);
+            //  setContentView(R.layout.main_book);
+            startActivity(intent);
+        }
+
+
+        return super.onOptionsItemSelected ( item );
+    }
+
 
 }

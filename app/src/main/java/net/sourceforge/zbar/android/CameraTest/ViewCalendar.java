@@ -4,36 +4,36 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
 
 
 public class ViewCalendar extends Activity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_calendar);
-    }
+        setContentView(R.layout.activity_calendar);
 
+        WebView WebViw = (WebView) findViewById(R.id.webView1);
+
+       /* WebViw.setInitialScale(5);
+        WebViw.getSettings().setJavaScriptEnabled(true);
+        WebViw.getSettings().setLoadWithOverviewMode(true);
+        WebViw.getSettings().setUseWideViewPort(true);
+        WebViw.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
+        WebViw.setScrollbarFadingEnabled(false);*/
+
+
+
+
+        WebViw.getSettings().setJavaScriptEnabled(true);
+        WebViw.loadUrl("http://web52.phuket.psu.ac.th/web52/event-calendar.php");
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_view_calendar, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

@@ -3,12 +3,12 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="#b2000409">
+    android:background="#000061ff">
 
     <LinearLayout
         android:id="@+id/group"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content" >
 
         <Button
             android:id="@+id/buttonAdd"
@@ -18,12 +18,13 @@
     </LinearLayout>
 
 
+
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Hello World, SQLiteDatabaseActivity!"
-        android:background="#b2000409"></ListView>
+        android:background="#000066ff"></ListView>
 
 </LinearLayout>
 

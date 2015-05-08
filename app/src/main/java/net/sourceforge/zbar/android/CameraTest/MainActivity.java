@@ -3,16 +3,13 @@ package net.sourceforge.zbar.android.CameraTest;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.database.sqlite.SQLiteCursor;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
@@ -139,7 +136,7 @@ public class MainActivity extends Activity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(MainActivity.this, CameraTestActivity.class);
+        Intent intent = new Intent(MainActivity.this, CameraTestActivityWebserv.class);
         //  setContentView(R.layout.main_book);
         startActivity(intent);
 

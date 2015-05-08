@@ -3,10 +3,17 @@ package net.sourceforge.zbar.android.CameraTest;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -20,6 +27,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -32,11 +42,16 @@ public class MainActivity extends Activity {
 	//Progress Dialog Object
 	ProgressDialog prgDialog;
 
+
+    private static final int TAKE_PICTURE = 100;
+    private static final int TAKE_PICTURE_SAVE = 101;
+    private File imageFile;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(com.prgguru.example.R.layout.activity_main);
 		//Get User records from SQLite DB
+
 		ArrayList<HashMap<String, String>> userList =  controller.getAllUsers();
 		//
 		if(userList.size()!=0){
@@ -51,7 +66,46 @@ public class MainActivity extends Activity {
 		prgDialog = new ProgressDialog(this);
 		prgDialog.setMessage("Synching SQLite Data with Remote MySQL DB. Please wait...");
 		prgDialog.setCancelable(false);
-	}
+
+
+        Button btnCaptureSave = (Button) findViewById(R.id.Pic);
+        btnCaptureSave.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                imageFile = new File(Environment.getExternalStorageDirectory(), "my_image.jpg");
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(imageFile));
+                startActivityForResult(intent, TAKE_PICTURE_SAVE);
+            }
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        ImageView image = (ImageView) findViewById(R.id.image);
+
+        if (requestCode == TAKE_PICTURE && resultCode == RESULT_OK) {
+            Bitmap capturedImage = (Bitmap) data.getExtras().get("data");
+            image.setImageBitmap(capturedImage);
+        } else if (requestCode == TAKE_PICTURE_SAVE && resultCode == RESULT_OK) {
+            try {
+                FileInputStream fis = new FileInputStream(imageFile);
+                //Bitmap fullSizeImage = BitmapFactory.decodeStream(fis);
+
+                BitmapFactory.Options options = new BitmapFactory.Options();
+                options.inSampleSize = 2;
+                Bitmap fullSizeImage = BitmapFactory.decodeStream(fis, null, options);
+
+                image.setImageBitmap(fullSizeImage);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -75,10 +129,13 @@ public class MainActivity extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 	//Add User method getting called on clicking (+) button
-	public void addUser(View view) {
-		Intent objIntent = new Intent(getApplicationContext(), NewUser.class);
+
+
+
+/*	public void takePic(View view) {
+		Intent objIntent = new Intent(getApplicationContext(), CaptureCamera.class);
 		startActivity(objIntent);
-	}
+	}*/
 	
 	public void syncSQLiteMySQLDB(){
 		//Create AsycHttpClient object

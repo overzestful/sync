@@ -82,8 +82,8 @@ public class SQLiteDatabaseActivity extends ListActivity {
 
         TextView txt_name = (TextView) dialog.findViewById(R.id.textBookNAME);
         TextView txt_staff = (TextView) dialog.findViewById(R.id.textBookSTAFF);
-        TextView txt_password = (TextView) dialog.findViewById(R.id.textBookPASSWORD);
-        TextView txt_confirm_password = (TextView) dialog.findViewById(R.id.textBookCONFIRMPASSWORD);
+       /* TextView txt_password = (TextView) dialog.findViewById(R.id.textBookPASSWORD);
+        TextView txt_confirm_password = (TextView) dialog.findViewById(R.id.textBookCONFIRMPASSWORD);*/
         TextView txt_hour = (TextView) dialog.findViewById(R.id.textBookHOUR);
 
         txt_name.setText("ชื่อกิจกรรม :\t" + book.getName());

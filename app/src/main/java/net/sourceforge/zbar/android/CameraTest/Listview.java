@@ -47,6 +47,11 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Listview extends Activity {
+    protected static int HOME = 900;
+
+    protected static int ABOUTUS = 910;
+
+
 
     ArrayList<HashMap<String, String>> MyArrList;
     String[] Cmd = {"สแกน QR-Code","ดูรายละเอียด","แก้ไขกิจกรรม","ลบกิจกรรม"};
@@ -321,10 +326,47 @@ public class Listview extends Activity {
         return str.toString();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+
+    //ปุ่ม menu home
+
+    public boolean onCreateOptionsMenu ( Menu menu )
+    {
+        MenuItem item1 = menu.add ( 0, Main.HOME, Menu.NONE, "Home" );
+
+        item1.setIcon ( R.drawable.contentmenu_home );
+
+
+        MenuItem item2 = menu.add ( 0, Main.ABOUTUS, Menu.NONE, "" );
+
+        item2.setIcon ( R.drawable.contentmenu_aboutus );
+
+
+        return super.onCreateOptionsMenu ( menu );
     }
+
+    public boolean onOptionsItemSelected ( MenuItem item )
+    {
+        int itemID = item.getItemId ( );
+
+
+        if ( itemID == Main.HOME )
+        {
+            Intent intent = new Intent(Listview.this, Main.class);
+            //  setContentView(R.layout.main_book);
+            startActivity(intent);
+
+
+        }
+        else if ( itemID == Main.ABOUTUS )
+        {
+            Intent intent = new Intent(Listview.this, AboutUs.class);
+            //  setContentView(R.layout.main_book);
+            startActivity(intent);
+        }
+
+
+        return super.onOptionsItemSelected ( item );
+    }
+
 
 }

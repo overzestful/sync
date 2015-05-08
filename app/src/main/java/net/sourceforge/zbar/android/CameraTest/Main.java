@@ -93,7 +93,7 @@ public class Main extends Activity {
         }
         else if ( itemID == Main.ABOUTUS )
         {
-            Intent intent = new Intent(Main.this, AddActivityWebserv.class);
+            Intent intent = new Intent(Main.this, AboutUs.class);
             //  setContentView(R.layout.main_book);
             startActivity(intent);
         }
